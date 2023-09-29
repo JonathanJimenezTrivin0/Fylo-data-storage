@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --White: #fff;
+  --Pale-Blue: hsl(243, 100%, 93%);
+  --Grayish-Blue: hsl(229, 7%, 55%);
+  --Dark-Blue: hsl(228, 56%, 26%);
+  --Very-Dark-Blue: hsl(229, 57%, 11%);
+  --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-image: url(../images/bg-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main {
+  padding: 0px 23px;
+  margin: 125px auto;
+}
+
+.article {
+  padding: 38px 0px 38px 38px;
+  border-radius: 10px;
+  border-top-right-radius: 100px;
+  background-color: var(--Dark-Blue);
+}
+.article__ul {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.article__list {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Very-Dark-Blue);
+}
+
+.progress {
+  padding: 33px 30px 52px 30px;
+  margin-top: 12px;
+  border-radius: 10px;
+  background-color: var(--Dark-Blue);
+}
+.progress__text {
+  text-align: center;
+  margin-bottom: 15px;
+  color: var(--Grayish-Blue);
+}
+.progress__text-gb {
+  color: var(--White);
+}
+
+.progresss {
+  height: 20px;
+  margin-bottom: 8px;
+  background-color: var(--Very-Dark-Blue);
+  border-radius: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.progresss__bar {
+  padding-right: 1px;
+  padding-bottom: 1px;
+  height: 100%;
+  width: 70%;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.progresss__bar > div {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--White);
+}
+
+.GB {
+  color: var(--White);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.floating {
+  width: 180px;
+  height: 70px;
+  gap: 10px;
+  margin: 0px auto;
+  border-radius: 10px;
+  background-color: var(--White);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -35px;
+  animation: floatingAnimation 3s ease-in;
+}
+
+@keyframes floatingAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.floating__gb {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--Grayish-Blue);
+  text-transform: uppercase;
+}
+
+.attribution a {
+  background-color: linear-gradient(var(--Gradient));
+}
+
+.attribution {
+  font-size: 12px;
+  text-align: center;
+  background-color: linear-gradient(var(--Gradient));
+}
+
+@media screen and (min-width: 1023px) {
+  body {
+    background-color: var(--Very-Dark-Blue);
+    background-image: url(../images/bg-desktop.png);
+    background-position: bottom;
+    background-size: contain;
+    background-attachment: fixed;
+  }
+  .main {
+    max-width: 1440px;
+    margin-bottom: 300px;
+    padding-left: 258px;
+    margin-top: 190px;
+    display: flex;
+    align-items: end;
+    gap: 30px;
+  }
+  .article {
+    width: 350px;
+  }
+  .progress {
+    width: 540px;
+    height: 150px;
+  }
+  .progress__text {
+    text-align: start;
+  }
+  .floating {
+    right: 255px;
+    top: -130px;
+  }
+
+  .floating__triangle {
+    bottom: -20px;
+    right: 0;
+    position: absolute;
+    border-left: 30px solid transparent;
+    border-top: 30px solid var(--White);
+  }
+}
